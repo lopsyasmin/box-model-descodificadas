@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Descodificadas</title>
+    <style>
+        /* Estilos gerais da página */
+        body {
+            display: flex;
+            flex-direction: column; /* Alinhar elementos verticalmente */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Estilos do quadrado (camada externa) com imagem de fundo */
+        .outer-box {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%; /* Borda arredondada */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-image: url('https://i.ibb.co/PCJQhnD/Captura-de-tela-2023-10-01-154310.png'); /* URL da imagem de fundo */
+            background-size: cover;
+            box-shadow: 10px 10px 20px rgba(255, 105, 180, 0.5); /* Box shadow com deslocamento X e Y e cor rosa */
+            border: 10px dotted #FFC0CB; /* Borda em cor pastel */
+        }
+
+        /* Estilos da borda redonda (segunda camada) */
+        .rounded-border {
+            width: 80%; /* Diminui o tamanho para centralizar melhor */
+            height: 80%; /* Diminui o tamanho para centralizar melhor */
+            border: 10px double #fd3258; /* Borda redonda grossa e estilo "double" */
+            border-radius: 50%; /* Transforma a borda em um círculo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: rgba(255, 255, 255, 0.5); /* Adiciona um fundo branco semi-transparente */
+        }
+
+        /* Estilos da borda interna (borda quadrada) */
+        .square-border {
+            width: 100%;
+            height: 100%;
+            border: 5px dashed #dacc8f; /* Borda interna */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Estilos do texto no centro */
+        .center-text {
+            font-weight: bold;
+            font-style: italic;
+            color: #c4046e;
+            font-size: 26px;
+            font-family: 'Pacifico', cursive; /* Fonte que imita escrita à mão */
+            animation: blink 1s infinite;
+            border: 4px solid #f1084a; /* Aumenta a largura da borda e define uma cor */
+            border-radius: 50px; /* Arredonda a borda */
+            padding: 10px; /* Adiciona espaço entre o texto e a borda */
+            display: inline-block; /* Para tornar o elemento inline e respeitar o padding */
+        }
+
+        @keyframes blink {
+            0% { border: 2px dotted #e3114d; } /* Borda inicial */
+            50% { border: 2px dashed transparent; } /* Borda invisível */
+            90% { border: 2px dotted #FF6EC7; } /* Borda final */
+        }
+
+        /* Estilos do texto adicional */
+        .additional-text {
+            font-size: 16px;
+            font-family: 'Arial', sans-serif; 
+            margin-top: 20px; /* Espaçamento superior para afastar o texto do quadrado */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-box">
+        <div class="rounded-border">
+            <div class="square-border">
+                <p class="center-text">Descodificadas</p>
+            </div>
+        </div>
+    </div>
+    <div class="additional-text">Elaborado por Yasmin Aquino, Tarefa 8</div>
+</body>
+</html>
